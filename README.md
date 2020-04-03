@@ -1,2 +1,2 @@
-# demo1
-okya-study-vue-demo1
+#本项目为练习vue#
+运行 npm run dev
