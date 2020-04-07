@@ -8,7 +8,7 @@
 
 <script>
 export default {
-    name:'Page',
+    name:'page',
     data() {
         return {
             text1: '哈哈哈哈'

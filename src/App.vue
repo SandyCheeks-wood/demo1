@@ -3,10 +3,13 @@
         <img alt="Vue logo" src="./assets/image.jpg">
         <HelloWorld msg="首页" />
         <p>
-            <router-link to="/user">/user/foo</router-link>
-            <!-- <router-link to="/user/bar">/user/bar</router-link> -->
+            <router-link to="/user">go to user</router-link>
+            <!-- <router-link></router-link> -->
         </p>
-        <router-view>PS:写在这里,即router-view里的内容是不会显示在页面上的!</router-view>
+        <p>
+            <router-link :to="{name:'page'}">go to page</router-link>
+        </p>
+        <router-view>router-view</router-view>
     </div>
 </template>
 
