@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>我爱度娘</p>
+        <p>今晚的月色好美</p>
         <p>{{text1}}</p>
 
     </div>
@@ -11,7 +11,7 @@ export default {
     name:'page',
     data() {
         return {
-            text1: '哈哈哈哈'
+            text1: '风也温柔'
         }
     }
 }

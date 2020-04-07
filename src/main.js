@@ -1,4 +1,8 @@
 import Vue from 'vue'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/css/swiper.css'
 import App from './App.vue'
 import router from './router'
 // 报错1:You are using the runtime-only build of Vue where the template compiler is not available. Either pre
@@ -13,8 +17,14 @@ import router from './router'
 //   components: { App }
 // })
 
+// 加载  ElementUI
+Vue.use(ElementUI);
+// 加载 swiper
+Vue.use(VueAwesomeSwiper)
+
 // runtime
 new Vue({
+  el: '#app',
   router,
   // store,
   render: h => h(App)
