@@ -3,6 +3,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import user from './components/user.vue'
 import index from './components/index.vue'
+import father from './components/father.vue'
 
 // 2: 加载Router
 Vue.use(VueRouter);  //加载全局组件Router
@@ -40,5 +41,9 @@ export default new VueRouter({
         path:'/page',
         name:'page',
         component:resolve => require(['@/components/page'],resolve)
+    },{
+        path:'/father',
+        name:'father',  //给路由命名,设置的name要唯一
+        component: father
     }]
 })

@@ -11,6 +11,9 @@
             <p>
                 <router-link to="/index">go to index</router-link>
             </p>
+            <p>
+                <router-link to="/father">go to father</router-link>
+            </p>
             <router-view>router-view</router-view>
         </div>
     </div>
