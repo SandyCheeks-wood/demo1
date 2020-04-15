@@ -26,6 +26,9 @@ export default {
 <style scoped lang='scss'>
 .son {
     text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     .green {
         width: 300px;
         height: 50px;

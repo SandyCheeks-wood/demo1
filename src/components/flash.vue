@@ -8,7 +8,7 @@
 
 <script>
 export default {
-    name:'page',
+    name:'flash',
     data() {
         return {
             text1: '风也温柔'

@@ -2,8 +2,9 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import user from './components/user.vue'
+import flash from './components/flash.vue'
 import index from './components/index.vue'
-import father from './components/father.vue'
+import search from './components/search.vue'
 
 // 2: 加载Router
 Vue.use(VueRouter);  //加载全局组件Router
@@ -29,21 +30,22 @@ Vue.use(VueRouter);  //加载全局组件Router
 
 // // 3:配置路由实例
 export default new VueRouter({
-    routes:[{
-        path:'/index',
-        name:'index',  //给路由命名,设置的name要唯一
+    routes: [{
+        path: '/index',
+        name: 'index',  //给路由命名,设置的name要唯一
         component: index
-    },{
-        path:'/user',
-        name:'user',  //给路由命名,设置的name要唯一
+    }, {
+        path: '/user',
+        name: 'user',  //给路由命名,设置的name要唯一
         component: user
-    },{
-        path:'/page',
-        name:'page',
-        component:resolve => require(['@/components/page'],resolve)
-    },{
-        path:'/father',
-        name:'father',  //给路由命名,设置的name要唯一
-        component: father
+    }, {
+        path: '/flash',
+        name: 'flash',
+        component: flash
+        // component:resolve => require(['@/components/page'],resolve)
+    }, {
+        path: '/search',
+        name: 'search',  //给路由命名,设置的name要唯一
+        component: search
     }]
 })

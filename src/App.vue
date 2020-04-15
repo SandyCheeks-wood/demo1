@@ -1,38 +1,71 @@
 <template>
     <div id="app">
+        <!-- 轮播图 -->
+        <!-- <slideshow></slideshow> -->
+        <!-- 导航栏 -->
+        <div class="navBar">
+            <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" background-color="#8CCBFF" text-color="#fff" active-text-color="#ffd04b">
+                <el-menu-item index="1">
+                    <router-link to="/index">首页</router-link>
+                </el-menu-item>
+                <el-menu-item index="2">
+                    <router-link to="/flash">快讯</router-link>
+                </el-menu-item>
+                <el-menu-item index="3">
+                    <router-link to="/search">搜索</router-link>
+                </el-menu-item>
+                <el-submenu index="4">
+                    <template slot="title">用户中心</template>
+                    <el-menu-item index="4-1">选项1</el-menu-item>
+                    <el-menu-item index="4-2">选项2</el-menu-item>
+                    <el-menu-item index="4-3">选项3</el-menu-item>
+                </el-submenu>
+            </el-menu>
+        </div>
         <div class="pageCenter">
-            <p>
-                <router-link to="/user">go to user</router-link>
-                <!-- <router-link></router-link> -->
-            </p>
-            <p>
-                <router-link :to="{name:'page'}">go to page</router-link>
-            </p>
-            <p>
-                <router-link to="/index">go to index</router-link>
-            </p>
-            <p>
-                <router-link to="/father">go to father</router-link>
-            </p>
-            <router-view>router-view</router-view>
+            <router-view></router-view>
         </div>
     </div>
 </template>
 
 <script>
-
+import './static/css/common.css';
 export default {
     name: 'App',
-    // components: {}
+    data() {
+        return {
+            activeIndex: '1',
+        }
+    },
+    methods: {
+        handleSelect(key, keyPath) {
+            console.log(key, keyPath);
+        }
+    }
 }
 </script>
 
+// 当前页面
 <style scoped lang='scss'>
 #app {
     text-align: center;
-    .pageCenter {
-        width: 1170px;
-        background-color: red;
+    position: relative;
+    .navber {
+        background-color: #8ccbff;
     }
+}
+</style>
+
+// 全局覆盖
+<style lang='scss'>
+.el-menu.el-menu--horizontal.el-menu {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.el-menu-item,
+.el-submenu__title {
+    font-size: 20px;
 }
 </style>
