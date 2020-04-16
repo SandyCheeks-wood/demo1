@@ -1,12 +1,12 @@
 <template>
     <div class="slideshow">
         <swiper ref="mySwiper" :options="swiperOptions">
-            <swiper-slide><img src="@/static/images/source_1.jpeg" alt=""></swiper-slide>
-            <swiper-slide><img src="@/static/images/source_2.jpeg" alt=""></swiper-slide>
-            <swiper-slide><img src="@/static/images/source_3.jpeg" alt=""></swiper-slide>
-            <swiper-slide><img src="@/static/images/source_4.jpeg" alt=""></swiper-slide>
-            <swiper-slide><img src="@/static/images/source_5.jpeg" alt=""></swiper-slide>
-            <div class="swiper-pagination" slot="pagination"></div>
+            <swiper-slide><img src="@/static/images/person_1.jpg" alt=""></swiper-slide>
+                <swiper-slide><img src="@/static/images/person_2.jpg" alt=""></swiper-slide>
+                    <swiper-slide><img src="@/static/images/person_3.jpg" alt=""></swiper-slide>
+                        <swiper-slide><img src="@/static/images/person_4.jpg" alt=""></swiper-slide>
+                            <swiper-slide><img src="@/static/images/person_5.jpg" alt=""></swiper-slide>
+                                <div class="swiper-pagination" slot="pagination"></div>
         </swiper>
     </div>
 </template>
@@ -19,9 +19,11 @@ export default {
             swiperOptions: {
                 pagination: {
                     el: '.swiper-pagination',
-                    height: 300,
                 },
-                // Some Swiper option/callback...
+                loop: true,
+                width: 352,
+                height: 220,
+                autoplay:true,
             }
         }
     },
@@ -31,16 +33,19 @@ export default {
         }
     },
     mounted() {
-        console.log('Current Swiper instance object', this.swiper)
-        this.swiper.slideTo(3, 1000, false)
+        // console.log('Current Swiper instance object', this.swiper)
+        // this.swiper.slideTo(1, 1000, true);
     }
 }
 
 </script>
 
 <style scoped lang='scss'>
-.slideshow{
-    width: 600px;
-    height: 320px;
+.slideshow .swiper-container {
+    width: 352px;
+    height: 220px;
+    img {
+        width: 100%;
+    }
 }
 </style>

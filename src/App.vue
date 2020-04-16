@@ -4,7 +4,7 @@
         <!-- <slideshow></slideshow> -->
         <!-- 导航栏 -->
         <div class="navBar">
-            <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" background-color="#8CCBFF" text-color="#fff" active-text-color="#ffd04b">
+            <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
                 <el-menu-item index="1">
                     <router-link to="/index">首页</router-link>
                 </el-menu-item>
@@ -22,7 +22,7 @@
                 </el-submenu>
             </el-menu>
         </div>
-        <div class="pageCenter">
+        <div class="content center">
             <router-view></router-view>
         </div>
     </div>
@@ -50,8 +50,8 @@ export default {
 #app {
     text-align: center;
     position: relative;
-    .navber {
-        background-color: #8ccbff;
+    .navBar {
+        border-bottom: solid 2px #f3f3f3;
     }
 }
 </style>
@@ -67,5 +67,15 @@ export default {
 .el-menu-item,
 .el-submenu__title {
     font-size: 20px;
+    color: #000;
+}
+// .el-menu--horizontal>.el-menu-item.is-active {
+
+// }
+.el-menu--horizontal > .el-menu-item a,
+.el-menu--horizontal > .el-menu-item a:hover {
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 </style>

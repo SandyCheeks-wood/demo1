@@ -16,29 +16,38 @@ strong,
 em,
 i,
 del {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 a {
-  text-decoration: none;
-  color: #000;
+	text-decoration: none;
+	color: #000;
 }
 
 input {
-  border: 0 none;
-  outline: 0 none;
+	border: 0 none;
+	outline: 0 none;
 }
 
 img {
-  border: 0 none;
-  vertical-align: middle;
+	border: 0 none;
+	vertical-align: middle;
 }
 
 li {
-  list-style: none;
+	list-style: none;
 }
 
 i {
-  font-style: normal;
+	font-style: normal;
+}
+
+.center {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.content {
+	background-color: yellow;
 }
